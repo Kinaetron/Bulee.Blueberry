@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  blueberry:
+    image: ${DOCKER_REGISTRY-}blueberry
+    build:
+      context: .
+      dockerfile: Blueberry/Dockerfile

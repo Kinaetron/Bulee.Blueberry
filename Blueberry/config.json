@@ -1,0 +1,20 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/v1/users/{endpoint}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "api.gateway",
+          "Port": 5000
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/users/{endpoint}",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://api.gateway:5001"
+  }
+}
